@@ -1,0 +1,82 @@
+
+*Strings index: A string written in this way: “String” [n] will return the letter in the nth position.
+**Srings range: By writtin "string"[j:k] we will receive as output the characters from the j-th index to the k-th index. 
+
+*String methods:  //Methods that use dot notation (.method_name) only work with strings.
+**len(arg): it will return the length of the string given as argument.
+**‘some_string’.lower(): It will return the whole string in lower case.
+**‘some_string’.upper()
+str(arg): It will return whatever it has as argument but in str type.
+**'some_string'.isalpha(): It returns True if the given string doesn't contain non-letter characters.
+
+len--.lower()--.upper()--.isalpha()
+----------------------------------------------------------------------
+
+Libraries/modules: When importing a module in this way: import module_name , it is called a generic import. It is also posible import specific variables or functions in this way: from module_name import function_name. There's a last way of importing modules, the universal import perfomed by: from module_name import *. In this last case is not necessary to write the module name when using one of its functions.
+
+//When making universal import it is posible that more than one functions defined in the environment have the same name, thus conflicting. 
+
+*datetime: Some of it’s built ins are:
+now(): holds information about the current day such as the ‘.year’, ‘.month’,’.day’,’.hour’,’.minute’,’.second’.
+*math: 
+*random: Some library for random numbers.
+**randomint: module that allows to pick a random number from an inclusive interval of integers: randint(1,5) will pick any number among 1 and 5 inclusive.
+
+datetime--math--random
+---------------------------------------------------------------------
+Built-in python functions: 
+
+//argument vs parameter: an argument is an instance of a parameter.
+
+*dir(object) :It returns a list of valid attributes of the object, i.e. a list of functions from a given module.
+*max(argument(s)): returns the maximum value of a set of numbers.
+*min(argument(S)): returns the minimum value of a set of numbers.
+*abs(argument): returns the absolute value of the given argument.
+*type(argument): returns the data type of the given argument.
+*range(start,stop,step): it creates a range in this way: let i be the dummie then range(j,k,l) == j<=i<k and i+=l. Start defaults at 0 and step at 1. 
+*index, item: functions that in a for loop allows to keep a track of which index are we and the current element in a given iteration. They go in the dummie part.
+*zip(lista,listb): used in for loops, it goes over pair of element (one in each list) and stop at the end of the shorter list. It's placed in the range part.
+dir--max--min--abs--type
+---------------------------------------------------------------------
+Lists stuff (functions,methods): 
+
+*list.append(content): it adds a new item no the end of the list.
+*list[k:n]: makes reference to that segment of the list going from k to n. This specificacion is for i in k<=i<k. Additionaly there's list[n:] and list[:n], the first one goes from the n-th element to the last, and the other one goes from the first one to the n-th.
+*list.index(content): this function returns the index containing the given 'content'.
+*list.insert(index,content): It works similar to append, only that allows to control the index in which the object will be added.
+*list.sort(): It sort the content of a list depending of the data type. It has an special argument 'reverse=True or False' that allows to sort in descending order (when set to 'True' / default is False).
+*list.remove('element'): this deletes the refered element.
+*list.pop(index):returns the element contained within the given index and then deletes.
+*list.del(list[index]): it only deletes the refered element.
+*some_string.join(list): it let us print all the elements of a list of string, together as a single string, separating each element with the string previous to the call.
+// for loops in python use dummies that go across something called 'iterables' easily represented by list index, dictionary keys, or numeric ranges (using 'in range'). A word is also an iterable.
+// the fundamental difference between methods and functions in python is that a function is a piece of code called by it's name while the method is always associated with an object (an instance of a class).
+
+append--index--insert--.sort()--remove--pop--del
+---------------------------------------------------------------------
+Dictionaries stuff: A dictionary is a set of key-value pairs that differs from a list in the sense it isn't indexed. It sintax goes: 
+	dictionary={'key1':value1,'key2':value2,...,'keyn':valuen}
+*dictionary calls >> are the same as list calls, but replacing the 'index', with the respective 'key': dictionary['key_name']
+*dictionary assignment >> goes like: dictionary['new_key']=new_value
+*del dictionary['keyn']: this deletes the pare name-value refered
+
+//iteration over a dictionary uses de key as 'iterable'.
+
+del--
+---------------------------------------------------------------------
+while stuff:
+
+>>while/else statements: The else executes anytime the guard goes false, and more important, it never executes as a result of a break.
+
+//the ',' character after a string into a print sentence will make the next print appear on the same line.
+
+--------------------------------------------------------------------
+for stuff:
+
+>>for/else statements: They are used just after the loops end and if it didn't end with a break.
+
+//Ways of iterating over a list: 
+for item in list: 
+    print item
+for i in range(len(list)): 
+    print list[i]

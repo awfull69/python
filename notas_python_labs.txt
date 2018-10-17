@@ -1,0 +1,109 @@
+-----------------------LABORATORIO 1-----------------------
+*Los comentarios en python se escriben con '#'
+
+-Operadores artiméticos especiales: 
+** 'a**b': potencia.
+** 'a//b': división entera.
+** 'a%b': módulo.
+
+*Operadores lógicos: 'or', 'and', 'not', la equivalencia se escribe: '=='	.
+*Operadores de comparación especiales: '!=' desigualdad.
+*Python admite asignación multiple de variables, es decir: x = y = z = 1
+*Python admite admitación en paralelo: a,b,c = 1,2,3
+
+-Números complejos: 
+**Para escribir un número complejo se agrega la letra 'j' al final del número.
+**La operación complex(real,imag) permite definir números imaginarios.
+**Para extraer la parte real o imaginaria de un numero se utilizan las operaciones .real y .imag.
+**La operación abs() devuelve el módulo de ún numero complejo (cuando aplicada a complejos) y el valor absoluto de cualquier número.
+
+-Cuantificadores: 
+**Los predicados se definen: 
+	def nombre_predicado : operacion_booleana
+**La función range(a,b) retorna la lista de enteros en el rango a<=i<b.
+**Un cuantificador consta de tres partes: un rango, un filtro sobre el rango y un predicado.
+***El predicado corresponde al cuerpo de los cuantificadores en GCL.
+***El filtro es una condición adicional que puede aparecer en los cuantificadores en GCL.
+***La palabra_reservada para el cuantificador universal es 'all' y para el existencial 'any'.
+	palabra_reservada (predicado for dummie in rango if filtro) 
+	def nombre_prdicado(ctte) : return palabra_reservada (predicado for dummie in rango if filtro)
+***Otras funciones de agregación/palabras_reservadas para cuantificadores son 'sum', 'max' y 'min'
+
+*Las precondiciones y postcondiciones en python se manejan con la función assert() que recibe expresiones booleanas.
+
+
+-----------------------PRELABORATORIO^LABORATORIO 2-----------------------
+
+*En python lo que permite organizar los bloques de código es la indentación, pues esta indica un bloque de instrucciones en secuencia dentro de una acción compuesta.
+*El estándar son cuatro espacios de indentado.
+*Para comentarios largos se utiliza la triple comilla doble """ comentario """
+	
+*Sintaxis del if - La separación de las instrucciones en cada guardia es de mínimo un espacio a la derecha del if:
+if 1era_guardia: 
+    programa
+    ...
+elif 2da_guardia:
+    programa
+    ...
+else resto_del_universo:
+    programa
+    ...
+
+*La función int() convierte a entero el argumento - se utiliza para asignación de valores por entrada de datos.
+*Comando pass: literalmente no hace nada.
+*El estándar sugerido de largo de líneas es de 85 caracteres.
+*Este slash '\' permite continuar los comandos en la linea siguiente
+
+
+-----------------------PRELABORATORIO^LABORATORIO3-----------------------
+
+*La instrucción de repetición en python es el while:
+while guardia: 
+    Programa
+*En python, la repetición usa un assert de verificación antes del ciclo para el invariante, y luego, una verificación posterior para el invariante y la cota.
+
+-Pase de parámetros: 
+**Usando funciones de tipo: 
+	nombre_var = tipo(input("introduzca parámetro: ")
+**
+
+*La sintaxis del for en python es: 
+    for i in b:
+        programa
+    ..	
+en donde la i es una variable de conteo y b es el techo (inclusive) de un rango. 
+
+-----------------------PRELABORATORIO^LABORATORIO3-----------------------
+
+Listas:
+*Las listas se inicializan como una secuencia de elementos separados por comas y en corchetes: 
+	lista =  [e1,e2,..,en]
+**Para acceder a los elementos se llama a la lista empleado a los índices (que al igual que en GCL empiezan desde 0).
+**Se pueden concatenar las listas con el operador '+' y concatenar n-veces la lista en sí misma con el operador '*'.
+
+*La implementación de las listas anidadas en python es: 
+	arreg = [[e11,e12,e13],[e21,e22,e23],[e31,e32,e33]]
+**Para acceder a cada elemento el procedimiento es análogo al de las listas normales.
+
+*El ciclo for también puede ser utilizado para recorrer listas, su sintaxis (tal vez alternativa) es: 
+	for k in range(a,b):
+	    print(a[x])
+  en este caso la variable 'k' equivale a la implementación en un while de k+=1. Además, como es sabido, range(a,b) se interpreta como a<=k<b.
+**Una implementación alternativa del for para generación de listas es: 
+	var = [x for x in range(a,b)] // similar a aquella de los cuantificadores.
+
+Clases/Estructuras de datos:
+*En python las clases son objetos que permiten crear estructuras de datos que agrupan distintos atributos. La sintaxis para crearlas es:
+	class nombre_clase:
+	   att_1 = valor_inicial1 #tipo de dato 1 
+	   att_2 = valor_inicial2 #tipo de dato 2 
+**Para asignar a una variable el tipo definido por la clase:
+	var_p = nombre_clase()
+**Para asignar el atributo correspondiente: 
+	var_p.att_1 = algun_valor
+**No es correcto igualar una estructura a otra si se desea hacer una asignación, en tales casos, asignar atributo a atributo:
+	var1.att1 = var2.att2
+**En python para crear listas de estructuras, se hace del modo usual, solo que ahora sus elementos son instancias de un tipo estructurado. //Se debe tener la misma prevención de asignar 'atributo por atributo'.
+
+
+
