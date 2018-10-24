@@ -80,3 +80,14 @@ for item in list:
     print item
 for i in range(len(list)): 
     print list[i]
+
+.....
+
+expression oriented functions:
+
+map: this applies the given function to each element of the list.
+	list(map(aFunction,aList))
+It also support multiplie sequence arguments e.g. a two argument function will could receive two list of arguments.
+If function is 'None' identity is assumed.
+
+filter: Extract any element from a list, for which a given function returns 'True'.The function acts as a filter for the elements of the list.
